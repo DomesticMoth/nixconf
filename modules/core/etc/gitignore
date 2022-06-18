@@ -1,0 +1,8 @@
+# Windows executable files; Jut for example
+*.exe
+
+# Local files
+local
+local/
+env/
+.env/

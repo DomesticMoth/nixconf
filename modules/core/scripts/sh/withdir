@@ -1,0 +1,4 @@
+pth=$(pwd)
+cd $1
+${@: 2}
+cd $pth

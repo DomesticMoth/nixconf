@@ -1,0 +1,18 @@
+postf=".git"
+URI=$1
+COMMIT=$2
+NAME=$(basename $URI)
+NAME="${NAME%$postf}"
+if [ $3 ];
+then
+    NAME=$3
+fi
+#echo $NAME
+#echo $URI
+#echo $COMMIT
+mkdir $NAME
+cd $NAME
+git init
+git remote add origin $URI
+git fetch --depth 1 origin $COMMIT
+git checkout FETCH_HEAD
